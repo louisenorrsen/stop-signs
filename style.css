@@ -48,11 +48,11 @@ body {
 
 .row {
     display: flex;
+    gap:.5em;
 }
 
-.form * {
-    margin-top: .5em;
-    margin-right: .1em;
+.form input {
+    align-self: flex-start;
 }
 
 .sign {
