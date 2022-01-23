@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Förbudsskyltar</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Generera din egen förbudsskylt</h1>
+        </div>
+    </div>
+    <div class="hero">
+        <p>Har du någongång haft behov av att förmedla ett förbud på ett trevligt sätt? Då är den här tjänsten för dig!</p>
+    </div>
+
+    <div id="app" class="container">
+        <p>Fyll i svaren så att de stämmer överens med just din situation:</p>
+        <div class="form">
+            <label for="location" name="location" id="location">Vilken plats ska förbudet gälla?</label>
+            <input id="location" name="location" placeholder="t.ex. hall, altan, skola">
+            <label for="activity" name="activity" id="activity">Vad är förbjudet?</label>
+            <input id="location" name="location" placeholder="t.ex. springer, klättrar"><br>
+            <button class="btn">Generera skylt</button>
+        </div>
+        <div class="results">
+            <p>Här är din skylt:</p>
+        </div>
+        <div class="sign">
+            <p id="sign-text">Här hamnar ditt förbud</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
