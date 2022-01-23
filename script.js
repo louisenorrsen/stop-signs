@@ -3,13 +3,14 @@
 const app = Vue.createApp ({
     data () {
         return {
-            location: 'ett stall',
-            forbidden: 'klättra'
+            location: '',
+            forbidden: ''
         }
     },
     methods: {
         generateSign: function() {
             this.forbidden = this.forbidden[0].toUpperCase() + this.forbidden.slice(1)
+            this.location = this.location.toLowerCase()
             let sign = document.getElementById('sign')
             let button = document.getElementById('button')
             sign.style.display = 'block'
