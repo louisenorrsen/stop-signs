@@ -49,13 +49,19 @@ body {
 .row {
     display: flex;
     gap:.5em;
+    align-items: flex-start;
 }
 
 .form input {
     align-self: flex-start;
 }
 
-.sign {
+#sign {
+
+    display: none;
+}
+
+.sign p {
     background-color: var(--bg-clr-light);
     min-height: 5em;
     max-width: 20em;
@@ -64,6 +70,5 @@ body {
     font-weight: bold;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
-
