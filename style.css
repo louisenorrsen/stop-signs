@@ -8,7 +8,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
 body {
@@ -33,7 +33,8 @@ body {
     background-color: var(--pop-clr);
     font-size: 1.125rem;
     text-align: center;
-    border: 2px solid var(--bg-clr-dark);
+    border-top: 2px solid var(--bg-clr-dark);
+    border-bottom: 2px solid var(--bg-clr-dark);
 }
 
 .btn {
@@ -41,10 +42,17 @@ body {
     border: none;
     padding: .5em .7em;
     cursor: pointer;
+    color: hsl(0, 0%, 5%);
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
 }
 
 .form * {
-    margin-top: .5em; 
+    margin-top: .5em;
+    margin-right: .1em;
 }
 
 .sign {
