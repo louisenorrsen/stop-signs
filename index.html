@@ -35,7 +35,7 @@
 
             <div class="row"><label for="activity" name="activity" id="activity">Det är förbjudet att:</label>
 
-            <input id="location" name="location" v-model="forbidden" placeholder="ex. spring, klättra, skrik"></div>
+            <input id="location" name="location" v-model="input" placeholder="ex. spring, klättra, skrik"></div>
 
             <button class="btn" @click="generateSign">Generera skylt</button>
 
@@ -48,11 +48,6 @@
                 v-bind:forbidden="forbidden"></sign>            
         </div>
         <button id="button" class="btn" @click="resetSign">Gör om skylt</button>
-        <div>
-            <h2>developer tool</h2>
-            location: {{ location }}<br>
-            forbidden: {{ forbidden }}<br>
-        </div>
     </div>
     
 </body>
