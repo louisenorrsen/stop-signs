@@ -4,11 +4,14 @@ const app = Vue.createApp ({
     data () {
         return {
             location: '',
-            forbidden: ''
+            forbidden: []
         }
     },
     methods: {
         generateSign: function() {
+            if (this.forbidden.lenght === 2) {
+                this.forbidden = `${this.forbidden[0]} gärna ${this.forbidden[1]}`
+            }
             this.forbidden = this.forbidden[0].toUpperCase() + this.forbidden.slice(1)
             this.location = this.location.toLowerCase()
             let sign = document.getElementById('sign')
@@ -20,7 +23,7 @@ const app = Vue.createApp ({
             let sign = document.getElementById('sign')
             let button = document.getElementById('button')
             this.location = ''
-            this.forbidden = ''
+            this.forbidden = []
             sign.style.display = 'none'
             button.style.display = 'none'
         }
