@@ -9,12 +9,21 @@ const app = Vue.createApp ({
         }
     },
     methods: {
+        // validateSign: function(firstWord, secondWord) {
+        //     let array = ['äta', 'sova']
+            
+
+
+        // },
         generateSign: function() {
           this.forbidden = this.input.split(/\s+/)
           const firstWord = this.forbidden[0]
+          const secondWord = this.forbidden[1]
+
+        //   validatSign(firstWord, secondWord)
 
           if (this.forbidden.length > 1) {
-              this.forbidden = `${firstWord[0].toUpperCase() + firstWord.slice(1)} gärna ${this.forbidden[1]}`
+              this.forbidden = `${firstWord[0].toUpperCase() + firstWord.slice(1)} gärna ${secondWord}`
 
           } else {
               const forbiddenActivity = this.input[0].toUpperCase() + this.input.slice(1)
@@ -24,16 +33,21 @@ const app = Vue.createApp ({
           this.location = this.location.toLowerCase()
           const sign = document.getElementById("sign")
           const button = document.getElementById("button")
+          const submit = document.getElementById("submit")
           sign.style.display = "block"
+          sign.style.marginTop ="1em"
           button.style.display = "block"
+          submit.style.display = "none"
         },
         resetSign: function() {
             const sign = document.getElementById('sign')
             const button = document.getElementById('button')
+            const submit = document.getElementById("submit")
             this.location = ''
             this.input = ['']
             sign.style.display = 'none'
             button.style.display = 'none'
+            submit.style.display = "block"
         }
     }
 })

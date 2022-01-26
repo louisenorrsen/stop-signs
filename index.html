@@ -37,7 +37,7 @@
 
             <input id="location" name="location" v-model="input" placeholder="ex. spring, klättra, skrik"></div>
 
-            <button class="btn" @click="generateSign">Generera skylt</button>
+            <button id="submit" class="btn" @click="generateSign">Generera skylt</button>
 
 
         </div>
@@ -45,9 +45,10 @@
             <span>Här är ditt förbud:</span>
             <sign
                 v-bind:location="location"
-                v-bind:forbidden="forbidden"></sign>            
+                v-bind:forbidden="forbidden"></sign>     
+            <button id="button" class="btn" @click="resetSign">Gör om skylt</button>       
         </div>
-        <button id="button" class="btn" @click="resetSign">Gör om skylt</button>
+        
     </div>
     
 </body>

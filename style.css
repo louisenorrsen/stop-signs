@@ -67,6 +67,11 @@ body {
     display: none;
 }
 
+#button {
+    max-width: 20em;
+    margin: 0 auto;
+}
+
 .sign p {
     background-color: var(--bg-clr-light);
     min-height: 5em;
