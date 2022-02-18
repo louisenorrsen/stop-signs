@@ -1,3 +1,4 @@
+import { randomForbiddenActivity, randomPlaces } from "./randomData"
 
 
 const app = Vue.createApp ({
@@ -34,8 +35,9 @@ const app = Vue.createApp ({
             random.style.display = 'none'
         },
         generateRandomSign: function() {
-            const randomPlaces = ['en hall', 'en förskola', 'en skola', 'ett hus', 'en skog', 'ett bibliotek', 'en lekplats', 'ett hotell', 'en bil', 'en strand', 'en affär']
-            const randomForbiddenActivity = ['spring', 'skrik', 'ha roligt', 'hoppa', 'skratta', 'sola', 'var tjurig', 'åk skateboard', 'sjung', 'gråt', 'läs', 'sov']
+            
+            // const randomPlaces = ['en hall', 'en förskola', 'en skola', 'ett hus', 'en skog', 'ett bibliotek', 'en lekplats', 'ett hotell', 'en bil', 'en strand', 'en affär']
+            // const randomForbiddenActivity = ['spring', 'skrik', 'ha roligt', 'hoppa', 'skratta', 'sola', 'var tjurig', 'åk skateboard', 'sjung', 'gråt', 'läs', 'sov']
             const randomPlacesNumber = Math.floor(Math.random() * randomPlaces.length)
             const randomActivityNumber = Math.floor(Math.random() * randomForbiddenActivity.length)
 
